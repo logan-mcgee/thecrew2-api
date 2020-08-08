@@ -1,0 +1,14 @@
+{
+  "name": "thecrew2-api",
+  "version": "1.0.0",
+  "description": "Wraps The Crew 2 API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sadboilogan",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2"
+  }
+}
