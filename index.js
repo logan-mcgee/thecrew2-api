@@ -125,6 +125,7 @@ class TheCrew2 {
           "Content-Type": "application/json",
         }
       }).then(summit => {
+        this.summitId = summit.data[0].id;
         resolve(summit.data[0]);
       }).catch(err => {
         throw new Error(`Issue getting current summit? Err: ` + err);
@@ -185,7 +186,7 @@ class TheCrew2 {
     });
   }
 
-  getSummitRanking(userId, platform = "pc", summitId) {
+  getUserSummitRanking(userId, platform = "pc", summitId) {
     if (userId.userId) userId = userId.userId;
     if (!summitPlatforms.includes(platform)) throw new Error("Invalid platform type, should be: " + summitPlatforms.join(", "));
 
